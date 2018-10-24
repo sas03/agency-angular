@@ -1,0 +1,59 @@
+<!--
+/**
+ * Created by PhpStorm.
+ * User: sumo stephane
+ * Date: 13/10/2018
+ * Time: 15:03
+ */
+-->
+<h1>Liste des salaries</h1>
+
+<div class="counter" *ngIf="salaries">
+    <p>{{salaries.length}} salaries</p>
+</div>
+
+<div class="mt-5 mb-5">
+    <a routerLink='/createsalarie' class="btn btn-info">ajouter un salarié</a>
+</div>
+
+<div class="row">
+    <div class="col-md-12 mb-5"></div>
+    <div class="col-md-12 mt-5">
+    <div class="table-responsive-md">  
+      <table class="table table-dark rounded">
+        <thead>
+          <tr>
+            <th scope="col" style="border: 5px solid white">id</th>
+            <th scope="col" style="border: 5px solid white">name</th>
+            <th scope="col" style="border: 5px solid white">username</th>
+            <th scope="col" style="border: 5px solid white">day of birth</th>
+            <th scope="col" style="border: 5px solid white">adresse</th>
+            <th scope="col" style="border: 5px solid white">telephone</th>
+            <th scope="col" style="border: 5px solid white">email</th>
+            <th scope="col" style="border: 5px solid white">position</th>
+            <th style="border: 5px solid white"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let salarie of salaries; let i = index">
+            <td style="border: 5px solid white">{{i + 1}}</td>
+            <td style="border: 5px solid white">{{salarie.name}}</td>
+            <td style="border: 5px solid white">{{salarie.username}}</td>
+            <td style="border: 5px solid white">{{salarie.birthday}}</td>
+            <td style="border: 5px solid white">{{salarie.address.rue + " | " + salarie.address.ville + " " + salarie.address.codepostal }}</td>
+            <td style="border: 5px solid white">{{salarie.telephone}}</td>
+            <td style="border: 5px solid white">{{salarie.email}}</td>
+            <td style="border: 5px solid white">{{salarie.position}}</td>
+            <td style="border: 5px solid white">
+                <a routerLink="/salarie/{{salarie._id}}" class="btn btn-primary">voir profil</a>
+                <a routerLink="/updatesalarie/{{salarie._id}}" class="btn btn-secondary">modifier profil</a>
+                <button type="button" name="button" class="btn btn-danger" (click)="deleteSalarie(salarie._id)">Supprimer</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+    </div>
+
+

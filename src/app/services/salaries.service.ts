@@ -4,10 +4,10 @@ import { Http, Headers, Response, RequestOptions, RequestMethod } from '@angular
 import { Router } from '@angular/router';
 
 @Injectable()
-export class UsersService {
+export class SalariesService {
 
 // ApiUrl="http://localhost:4200/assets/data/data.json";
-apiUrl="http://localhost:3000/users/";
+apiUrl="http://localhost:3000/salaries/";
 
 datatopost;
 
@@ -21,23 +21,28 @@ httpOptions = {
   }
 
 // get all users
-getUsers(){
+getSalaries(){
     return this.http.get(this.apiUrl);
 }
 
 // get one user by Id
-getUser(id){
+getSalarie(id){
     return this.http.get(this.apiUrl+id);
 }
 
 // create a user
-createUser(username,name,website){
+createSalarie(name,firstname,username,birthday,address,telephone,email,position){
     // body envoyé dans la requête, appelé payload
     const payload =
         {
-          "name":username,
-          "username":name,
-          "website":website
+          "name":name,
+          "firstname":firstname,
+          "username":username,
+          "birthday":birthday,
+          "address":address,
+          "telephone":telephone,
+          "email":email,
+          "position":position
         }
 
     // conversion en jSON
@@ -55,14 +60,19 @@ createUser(username,name,website){
 }
 
 // mise à jour user
-updatedUser(username,name,website,id){
+updatedSalarie(name,firstname,username,birthday,address,telephone,email,position,id){
 
     // body envoyé dans la requête, appelé payload
     const payload =
         {
-          "name":username,
-          "username":name,
-          "website":website
+          "name":name,
+          "firstname":firstname,
+          "username":username,
+          "birthday":birthday,
+          "address":address,
+          "telephone":telephone,
+          "email":email,
+          "position":position
         }
 
         // conversion en JSON

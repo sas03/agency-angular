@@ -1,8 +1,28 @@
-<h1>Homepage</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<!--
+/**
+ * Created by PhpStorm.
+ * User: sumo stephane
+ * Date: 13/10/2018
+ * Time: 15:03
+ */
+-->
 
-<a routerLink="/users" class="btn btn-primary">
-    liste des utilisateurs
-</a>
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8  mt-5 text-center" style="color:limegreen; border: 5px solid black; border-radius: 25%; background-color: red; background-image: url('assets/agencybs.jpg'); background-repeat: no-repeat; background-size: 100% 100%">
+        <h1 class="mt-5 mb-5" style="color: blue">Welcome to my agency</h1>
+        <h2 class="mt-5 mb-5">You don't communicate properly and have problems with planning</h2>
+        <h2 class="mt-5 mb-5">And more often than not, it leads to bad choices when starting your project</h2>
+        <h2 class="mt-5 mb-5">But don't worry. We're here to help you make the right choices !</h2>
+        <button [routerLink]="['/projects']" class="btn btn-primary mr-4 mb-4 pr-5 pl-5 pt-2 pb-2">Projects</button>
+        <button [routerLink]="['/clients']" class="btn btn-primary mr-4 mb-4 pr-5 pl-5 pt-2 pb-2">Clients</button>
+        <button [routerLink]="['/salaries']" class="btn btn-primary mb-4 pr-5 pl-5 pt-2 pb-2">Salariés</button>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+<div class="row">
+    <div class="col-md-2"><img src="" style="opacity: 1" /></div>
+    <div class="col-md-8">
+    </div>
+    <div class="col-md-2"></div>
+</div>

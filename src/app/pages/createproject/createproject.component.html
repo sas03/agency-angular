@@ -1,0 +1,51 @@
+<!-- formulaire de création d'un user -->
+<form>
+    <div class="row">
+
+        <div class="col">
+            <div class="form-group">
+                <label>Name</label>
+
+                <!-- voir "value" et "(change)" -->
+                <input type="text" class="form-control" placeholder="Name" [value]="formCreate.name" (change)="formCreate.name = $event.target.value">
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <label>Description</label>
+                <input type="text" class="form-control" placeholder="Address" [value]="formCreate.description" (change)="formCreate.description = $event.target.value">
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-group">
+                <label>Status</label>
+                <input type="text" class="form-control" placeholder="Contact" [value]="formCreate.status" (change)="formCreate.status = $event.target.value">
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-group">
+                <label>Debut</label>
+                <input type="text" class="form-control" placeholder="Debut" [value]="formCreate.debut" (change)="formCreate.debut = $event.target.value">
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-group">
+                <label>Fin</label>
+                <input type="text" class="form-control" placeholder="Fin" [value]="formCreate.fin" (change)="formCreate.fin = $event.target.value">
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-group">
+                <label>Couts</label>
+                <input type="text" class="form-control" placeholder="Couts" [value]="formCreate.cost" (change)="formCreate.cost = $event.target.value">
+            </div>
+        </div>
+    </div>
+
+    <!-- bouton d'ajout, utiliser la fonction (click) -->
+    <button type="button" name="button" class="btn btn-info" (click)=createProject() onclick="ajouter()">Ajouter</button>
+
+</form>

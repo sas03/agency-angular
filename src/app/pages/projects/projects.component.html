@@ -1,0 +1,58 @@
+<!--
+/**
+ * Created by PhpStorm.
+ * User: sumo stephane
+ * Date: 13/10/2018
+ * Time: 15:03
+ */
+-->
+<h1>Liste des projets</h1>
+
+<div class="counter" *ngIf="projects">
+    <p>{{projects.length}} projects</p>
+</div>
+
+<div class="mt-5 mb-5">
+    <a routerLink='/createproject' class="btn btn-info">ajouter un projet</a>
+</div>
+
+<div class="row">
+    <div class="col-md-12 mb-5"></div>
+    <div class="col-md-12 mt-5">
+    <div class="table-responsive-md">  
+      <table class="table table-dark rounded">
+        <thead>
+          <tr>
+            <th scope="col" style="border: 5px solid white">id</th>
+            <th scope="col" style="border: 5px solid white">name</th>
+            <th scope="col" style="border: 5px solid white">description</th>
+            <th scope="col" style="border: 5px solid white">status</th>
+            <th scope="col" style="border: 5px solid white">date de début</th>
+            <th scope="col" style="border: 5px solid white">date de fin</th>
+            <th scope="col" style="border: 5px solid white">montant total</th>
+            <th style="border: 5px solid white"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let project of projects; let i = index">
+            <td style="border: 5px solid white">{{i + 1}}</td>
+            <td style="border: 5px solid white">{{project.name}}</td>
+            <td style="border: 5px solid white">{{project.description}}</td>
+            <td style="border: 5px solid white">{{project.status}}</td>
+            <td style="border: 5px solid white">{{project.debut}}</td>
+            <td style="border: 5px solid white">{{project.fin}}</td>
+            <td style="border: 5px solid white">{{project.cost}}</td>
+        
+            <td style="border: 5px solid white">
+                <a routerLink="/project/{{project._id}}" class="btn btn-primary">voir profil</a>
+                <a routerLink="/updateproject/{{project._id}}" class="btn btn-secondary">modifier profil</a>
+                <button type="button" name="button" class="btn btn-danger" (click)="deleteProject(project._id)">Supprimer</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+    </div>
+
+

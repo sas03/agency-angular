@@ -1,19 +1,12 @@
-header{
-    padding:10px;
-    text-align: center;
-}
-header ul{
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 20px;
-}
-header ul li a{
-    padding:10px;
-    color: black;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 12px;
-    letter-spacing: 2px;
-}
+
+/**
+ * Created by PhpStorm.
+ * User: sumo stephane
+ * Date: 13/10/2018
+ * Time: 15:03
+ */
+ img{
+    width: 100%;
+    height: 300px;
+  }
+  

@@ -1,13 +1,13 @@
-<!-- formulaire de création d'un user -->
+<!-- formulaire de création d'un client -->
 <form>
     <div class="row">
 
         <div class="col">
             <div class="form-group">
-                <label>Nom</label>
+                <label>Name</label>
 
                 <!-- voir "value" et "(change)" -->
-                <input type="text" class="form-control" placeholder="Nom" [value]="formCreate.name" (change)="formCreate.name = $event.target.value">
+                <input type="text" class="form-control" placeholder="Name" [value]="formCreate.name" (change)="formCreate.name = $event.target.value">
             </div>
         </div>
 
@@ -15,19 +15,25 @@
     <div class="row">
         <div class="col">
             <div class="form-group">
-                <label>Username</label>
-                <input type="text" class="form-control" placeholder="Username" [value]="formCreate.username" (change)="formCreate.username = $event.target.value">
+                <label>Adresse</label>
+                <input type="text" class="form-control" placeholder="Address" [value]="formCreate.address" (change)="formCreate.address = $event.target.value">
             </div>
         </div>
         <div class="col">
             <div class="form-group">
-                <label>Website</label>
-                <input type="text" class="form-control" placeholder="Website" [value]="formCreate.website" (change)="formCreate.website = $event.target.value">
+                <label>Contact</label>
+                <input type="text" class="form-control" placeholder="Contact" [value]="formCreate.contact" (change)="formCreate.contact = $event.target.value">
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-group">
+                <label>Activity</label>
+                <input type="text" class="form-control" placeholder="Activity" [value]="formCreate.activity" (change)="formCreate.activiy = $event.target.value">
             </div>
         </div>
     </div>
 
     <!-- bouton d'ajout, utiliser la fonction (click) -->
-    <button type="button" name="button" class="btn btn-info" (click)=createUser()>Ajouter</button>
+    <button type="button" name="button" class="btn btn-info" (click)=createClient() onclick="ajouter()">Ajouter</button>
 
 </form>

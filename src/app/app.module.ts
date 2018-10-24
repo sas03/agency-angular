@@ -9,27 +9,45 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './partials/header/header.component';
 import { FooterComponent } from './partials/footer/footer.component';
-import { UsersComponent } from './pages/users/users.component';
+import { ClientsComponent } from './pages/clients/clients.component';
+import { ProjectsComponent } from './pages/projects/projects.component';
+import { SalariesComponent } from './pages/salaries/salaries.component';
 import { HomeComponent } from './pages/home/home.component';
-import { UserComponent } from './pages/user/user.component';
+import { ClientComponent } from './pages/client/client.component';
+import { ProjectComponent } from './pages/project/project.component';
+import { SalarieComponent } from './pages/salarie/salarie.component';
 import { AboutComponent } from './pages/about/about.component';
 import { CreateComponent } from './pages/create/create.component';
+import { CreateprojectComponent } from './pages/createproject/createproject.component';
+import { CreatesalarieComponent } from './pages/createsalarie/createsalarie.component';
 
 // services
-import {UsersService} from './services/users.service';
+import {ClientsService} from './services/clients.service';
+import {ProjectsService} from './services/projects.service';
+import {SalariesService} from './services/salaries.service';
 import { UpdateComponent } from './pages/update/update.component';
+import { UpdateprojectComponent } from './pages/updateproject/updateproject.component';
+import { UpdatesalarieComponent } from './pages/updatesalarie/updatesalarie.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    UsersComponent,
+    ClientsComponent,
+    ProjectsComponent,
+    SalariesComponent,
     HomeComponent,
-    UserComponent,
+    ClientComponent,
+    ProjectComponent,
+    SalarieComponent,
     AboutComponent,
     CreateComponent,
+    CreateprojectComponent,
+    CreatesalarieComponent,
     UpdateComponent,
+    UpdateprojectComponent,
+    UpdatesalarieComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +55,9 @@ import { UpdateComponent } from './pages/update/update.component';
     HttpClientModule
   ],
   providers: [
-      UsersService
+      ClientsService,
+      ProjectsService,
+      SalariesService
   ],
   bootstrap: [AppComponent]
 })

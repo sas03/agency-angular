@@ -1,17 +1,31 @@
-<header>
-    <div class="logo-header">
-        <a routerLink="">
-            <img src="https://res.cloudinary.com/hrscywv4p/image/upload/c_limit,fl_lossy,h_1440,w_720,f_auto,q_auto/v1/14484/angular-100x100_gwxa2z.png" alt="nike">
-        </a>
-    </div>
-    <nav class="main-menu">
-        <ul>
-            <li>
-                <a routerLink="about">about</a>
-            </li>
-            <li>
-                <a routerLink="users">utilisateurs</a>
-            </li>
-        </ul>
-    </nav>
-</header>
+
+<!--
+/**
+ * Created by PhpStorm.
+ * User: sumo stephane
+ * Date: 13/10/2018
+ * Time: 15:03
+ */
+-->
+<header>        
+    <img src="assets\agence.jpg" />
+  
+    <ul class="nav nav-tabs bg-dark">
+      <li class="nav-item">
+        <a class="nav-link disabled">SSA</a>
+      </li>
+      <li class="nav-item">
+        <a [routerLink]="['/']" class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a [routerLink]="['/projects']" class="nav-link" href="#">Projects</a>
+      </li>
+      <li class="nav-item">
+        <a [routerLink]="['/clients']" class="nav-link" href="#">Clients</a>
+      </li>
+      <li class="nav-item">
+        <a [routerLink]="['/salaries']" class="nav-link" href="#">Salariés</a>
+      </li>
+    </ul>
+  </header>
+  

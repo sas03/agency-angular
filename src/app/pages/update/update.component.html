@@ -1,5 +1,5 @@
 <!-- formulaire pour update -->
-<form *ngIf="user">
+<form *ngIf="client">
 
   <div class="row">
 
@@ -7,14 +7,14 @@
         <div class="form-group">
             <label>Nom</label>
             <!-- ici, pour récupérer la valeur du nom dans le formaulaire, on utiliser [value], pour récupérer la modification, on utilise (onchange) -->
-            <input type="text" class="form-control" placeholder="First name" [value]="user.name" (change)="formUpdate.name = $event.target.value">
+            <input type="text" class="form-control" placeholder="First name" [value]="client.name" (change)="formUpdate.name = $event.target.value">
         </div>
     </div>
 
     <div class="col">
         <div class="form-group">
-            <label>Username</label>
-            <input type="text" class="form-control" placeholder="First name" [value]="user.username" (change)="formUpdate.username = $event.target.value">
+            <label>Adresse</label>
+            <input type="text" class="form-control" placeholder="First name" [value]="client.address" (change)="formUpdate.address = $event.target.value">
         </div>
     </div>
 
@@ -24,14 +24,14 @@
 
     <div class="col">
         <div class="form-group">
-            <label>website</label>
-            <input type="text" class="form-control" placeholder="First name" [value]="user.website" (change)="formUpdate.website = $event.target.value">
+            <label>contact</label>
+            <input type="text" class="form-control" placeholder="First name" [value]="client.contact" (change)="formUpdate.contact = $event.target.value">
         </div>
     </div>
 
   </div>
 
   <!-- bouton de modificaton, sur l'event click, on appel la fonction updateUser qui a comme argument, le userid -->
-  <button type="button" name="button" class="btn btn-info" (click)=updateUser(user.id)>modifier</button>
+  <button type="button" name="button" class="btn btn-info" (click)=updateClient(client.id) onclick="modifier()">modifier</button>
 
 </form>

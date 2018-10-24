@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {UsersService} from '../../services/users.service';
+import {ClientsService} from '../../services/clients.service';
 import {Router} from '@angular/router';
 
 @Component({
@@ -12,11 +12,16 @@ export class CreateComponent implements OnInit {
     // création de l'objet formCreate dans lequel nous allons mettre les valeurs de l'input - voir html
     formCreate={
     name:"",
-    username:"",
-    website:""
+    address:{
+        rue: "",
+        ville: "",
+        codepostal:null,
+    },
+    contact:null,
+    activity:""
     }
 
-    constructor(private usersService:UsersService,private route:Router) {
+    constructor(private clientsService:ClientsService,private route:Router) {
 
     }
 
@@ -24,10 +29,10 @@ export class CreateComponent implements OnInit {
     }
 
     // fonction appelée au clique du bouton ajouter - voir html fonction (click)
-    createUser(){
+    createClient(){
     // on consomme notre service qui a comme arguments les valuers du formulaire
-    this.usersService
-    .createUser(this.formCreate.name,this.formCreate.username,this.formCreate.website);
+    this.clientsService
+    .createClient(this.formCreate.name,this.formCreate.address.ville,this.formCreate.contact,this.formCreate.activity);
     }
 
 }

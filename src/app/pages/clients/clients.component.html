@@ -1,0 +1,61 @@
+<!--
+/**
+ * Created by PhpStorm.
+ * User: sumo stephane
+ * Date: 13/10/2018
+ * Time: 15:03
+ */
+-->
+
+<script>
+function myFunction() {
+    alert("I am an alert box!");
+}
+</script>
+<h1>Liste des clients</h1>
+
+<div class="counter" *ngIf="clients">
+    <p>{{clients.length}} clients</p>
+</div>
+
+<div class="mt-5 mb-5">
+    <a routerLink='/create' class="btn btn-info">ajouter un client</a>
+</div>
+
+<div class="row">
+    <div class="col-md-12 mb-5"></div>
+    <div class="col-md-12 mt-5">
+    <div class="table-responsive-md">  
+      <table class="table table-dark rounded">
+        <thead>
+          <tr>
+            <th scope="col" style="border: 5px solid white">id</th>
+            <th scope="col" style="border: 5px solid white">name</th>
+            <th scope="col" style="border: 5px solid white">address</th>
+            <th scope="col" style="border: 5px solid white">contact</th>
+            <th scope="col" style="border: 5px solid white">activity</th>
+            <th style="border: 5px solid white"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let client of clients; let i = index">
+            <td style="border: 5px solid white">{{i + 1}}</td>
+            <td style="border: 5px solid white">{{client.name}}</td>
+            <td style="border: 5px solid white">{{client.address.rue + " | " + client.address.ville + " " + client.address.codepostal }}</td>
+            <td style="border: 5px solid white">{{client.contact}}</td>
+            <td style="border: 5px solid white">{{client.activity}}</td>
+
+            <td style="border: 5px solid white">
+                <a routerLink="/client/{{client._id}}" class="btn btn-primary">voir profil</a>
+                <a routerLink="/update/{{client._id}}" class="btn btn-secondary">modifier profil</a>
+                
+                <button type="button" name="button" class="btn btn-danger" (click)="deleteClient(client._id)" onclick="supprimer()">Supprimer</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+    </div>
+
+
